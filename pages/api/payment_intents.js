@@ -15,7 +15,7 @@ export default async (req, res) => {
 
       const paymentIntent = await stripe.paymentIntents.create({
         amount,
-        currency: "usd"
+        currency: "brl",
       });
 
       res.status(200).send(paymentIntent.client_secret);
